@@ -3,8 +3,9 @@ $(document).ready(function(){
   var values = ["Ace", "King", "Queen", "Jack", "Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two"]
 
   suits.forEach(function(suit){
+    $("#deckBox").append("<ul id='" + suit +"'></ul>")
     values.forEach(function(value){
-      $("#deck").append("<li>" + value + " of " + suit +"</li>");
+      $("#" + suit).append("<li>" + value + " of " + suit +"</li>");
     });
   });
 });
